@@ -1,0 +1,76 @@
+\documentclass[10pt, titlepage]{article}
+% preámbulo
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[document]{ragged2e}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+
+\usepackage{xcolor}
+\geometry{
+    a4paper,
+    left=25mm,
+    right=25mm,
+    top=25mm,
+    bottom=25mm
+}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Eduardo Arroyo Ramírez \\ i12arrae@uco.es}
+\lhead{Microsoft y Software Libre \\ Software Libre y Compromiso Social }
+\lfoot{\rightmark}
+\rfoot{Página \thepage}
+
+\def\code#1{\texttt{#1}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=black
+}
+
+\title{Microsoft y Software Libre}
+\author{Eduardo Arroyo Ramírez}
+
+\begin{document}
+
+%\graphicspath{ {figuras} }
+
+\makeatletter
+\begin{titlepage}
+    \begin{center}
+        {\scshape\Large Escuela Politécnica Superior \par}
+        \vspace{0.5cm}
+        {\scshape\large Universidad de Córdoba \par}
+        \vspace{4cm}
+        {\scshape\Huge Microsoft y Software Libre \par}
+        \vspace{0.5cm}
+        {\itshape\Large Software Libre y Compromiso Social \par}
+    \end{center}
+    \vspace{13cm}
+    \begin{flushright}
+        \@author\space \\
+        i12arrae@uco.es \\
+        Curso 2019/2020
+    \end{flushright}
+\end{titlepage}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+% Aquí comienza el cuerpo del documento
+\justify
+
+\bibliographystyle{ieeetr}
+\bibliography{microsoftsl}
+\addcontentsline{toc}{section}{Bibliografía}
+
+\end{document}
