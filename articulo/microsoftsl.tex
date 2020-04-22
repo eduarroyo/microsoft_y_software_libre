@@ -70,23 +70,40 @@
 % Aquí comienza el cuerpo del documento
 \justify
 \section{Introducción}
-Desde que Satya Nadella fuera nombrado CEO de Microsoft en 2014, la compañía ha dado un giro de 180º en su posición respecto al software libre. En este trabajo se repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También se describirán los productos que Microsoft ha liberado, como .NET Framework, Visual Studio Code, Xamarin.Forms, y cómo ahora están soportados por plataformas como Linux o MacOS.
+Microsoft es una multinacional fundada el 4 de abril de 1975 por Bill Gates y Paul Allen en Albuquerque, Nuevo México. Desde sus inicios, la compañía se ha caracterizado por su cuestionable ética y su agresiva estrategia empresarial, utilizando su posición dominante para ``exterminar'' a la competencia e imponer sus productos y sus estándares. Además, la compañía de Redmond ha sido históricamente un enemiga acérrima del software libre, pero desde que Satya Nadella fuera nombrado CEO de Microsoft en 2014, la compañía ha dado un giro de 180º a su postura al respecto.
+
+En este trabajo se repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También se describirán los productos que Microsoft ha liberado, como .NET Framework, Visual Studio Code, Xamarin.Forms, y cómo ahora están soportados por plataformas como Linux o MacOS.
 
 \section{Relación de Microsoft con el Software Libre}
-\subsection{Microsoft con Gates y Ballmer}
-Históricamente, Microsoft siempre ha destacado por su oposición al paradigma del software libre/código abierto. Desde 1970 hasta 2010, bajo las direcciones de Bill Gates primero y Steve Ballmer después, 
+
+\subsection{El estilo Microsoft: Embrace, extend and extinguish}
+
+\subsubsection{OS/2 vs Windows 3.X}
+\href{https://www.quora.com/Why-did-IBMs-OS-2-project-lose-to-Microsoft-given-that-IBM-had-much-more-resources-than-Microsoft-at-that-time}{Microsoft desarrolló OS/2} como socio de IBM y luego se desmarcó para desarrollar su Windows 3.X desde una posición de ventaja y hacer la competencia a OS/2.
+
+\subsubsection{La guerra de los navegadores}
+Durante los años 90 tuvo lugar la llamada \href{https://es.wikipedia.org/wiki/Guerra_de_navegadores}{Guerra de Navegadores} en la que Microsoft logró imponer su navegador Internet Explorer distribuyéndolo gratuitamente con Windows 95, lo que asfixió comercialmente a su principal competidor, Netscape Communicator, que contaba con un producto mejor. Aunque Microsoft fue condenado en un \href{https://es.wikipedia.org/wiki/Caso_Estados_Unidos_contra_Microsoft}{juicio por monopolio}, tras las apelaciones y el acuerdo final, las medidas adoptadas finalmente no obligaban a la compañía a realizar cambios efectivos en su estructura o su política comercial.
+
+\subsubsection{Embrace, extend and extinguish}
+El departamento de justicia de los estados unidos descubrió que Microsoft usaba la expresión ``\href{https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish}{embrace, extend and extinguish}'' internamente para describir su estrategia para introducir sus productos en ecosistemas con estándares establecidos, extender dichos estándares con elementos patentados y luego utilizar las diferencias para perjudicar a sus competidores.
+
+\subsection{Ataques al mundo del Software Libre}
+
+\subsubsection{1998-2004: The Halloween Documents}
+Se conoce como los ``\href{https://en.wikipedia.org/wiki/Halloween_documents}{Halloween Documents}'' una serie de documentos confidenciales de Microsoft sobre potenciales estrategias relacionadas con el software libre/open-source y sobre Linux en particular, y una serie de respuestas de los medios a estos documentos.
 
 \subsubsection{2001: ``Linux is a cancer''}
-Parecer ser que se refería a las licencias Copyleft, mientras que 
+
+\subsubsection{2010: Las guerras de patentes}
 
 \subsubsection{2014: Balmer contra LiMux}
  \href{https://www.muycomputer.com/2014/05/16/linux-en-munich/}{Balmer contra el cambio a Linux en Munich}
 
-\subsection{Microsoft con Nadella}
-
+\subsection{La etapa de Satya Nadella}
 Inicio 4/2/2014
+Cambio de paradigma: cloud computing, software como servicio: el software de servidor es territorio libre.
 
-\subsection{Microsoft abre .NET y lo lleva a Linux y OS}
+\subsubsection{Microsoft abre .NET y lo lleva a Linux y OS}
 \href{https://arstechnica.com/information-technology/2014/11/microsoft-open-sources-net-takes-it-to-linux-and-os-x/}{Microsoft abre .NET y lo lleva a Linux y OS}
 
 \subsubsection{2016: Xamarin}
@@ -102,7 +119,7 @@ Inicio 4/2/2014
 \href{https://www.xataka.com/aplicaciones/microsoft-punto-adquirir-github-desarrolladores-desarrolladores-desarrolladores}{Compra de GitHub 3}
 
 \subsubsection{2018: Open Invention Network}
-Hacer hincapié en las patentes que aporta, relación con la guerra de pantentes en el pasado.
+Hacer hincapié en las patentes que aporta, relación con la guerra de patentes en el pasado.
 \href{https://azure.microsoft.com/en-us/blog/microsoft-joins-open-invention-network-to-help-protect-linux-and-open-source/}{Microsoft se une a la Open Invention Network 1}
 
 \href{https://www.zdnet.com/article/what-does-microsoft-joining-the-open-invention-network-mean-for-you/}{Microsoft se une a la Open Invention Network 2}
@@ -114,8 +131,6 @@ Hacer hincapié en las patentes que aporta, relación con la guerra de pantentes
 
 \subsubsection{2019: Petición de liberar Windows 7}
 De llegar a liberar windows 7, quizás les interesaría utilizar una licencia copyleft para que nadie les hiciera competencia vendiendo su producto como no-libre.
-
-
 
 \section{Licencias de Microsoft}
 Cita: \cite{desde_linux_2020}
@@ -144,8 +159,13 @@ Esta es la versión de la Licencia Recíproca de Microsoft en la que los derecho
 \subsection{SignalR}
 \subsection{Xamarin}
 \subsection{Visual Studio Code}
+
+\section{Aplicación .NET Core desarrollada en entorno Linux}
+Descripción de un proyecto de ejemplo desarrollado en entorno Linux con .NET Core utilizando MVC y SignalR, con Visual Studio Code.
+
 \section{Conclusiones}
 
+\clearpage
 \bibliographystyle{ieeetr}
 \bibliography{microsoftsl}
 \addcontentsline{toc}{section}{Bibliografía}
