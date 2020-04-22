@@ -20,9 +20,10 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Eduardo Arroyo Ramírez \\ i12arrae@uco.es}
-\lhead{Microsoft y Software Libre \\ Software Libre y Compromiso Social }
-\lfoot{\rightmark}
+
+\lhead{\rightmark}
+\rhead{Microsoft y Software Libre}
+\lfoot{Eduardo Arroyo Ramírez}
 \rfoot{Página \thepage}
 
 \def\code#1{\texttt{#1}}
@@ -69,23 +70,74 @@
 % Aquí comienza el cuerpo del documento
 \justify
 \section{Introducción}
-Desde que Satya Nadella fuera nombrado CEO de Microsoft en 2014, la compañía ha dado un giro de 180º en su posición respecto al software libre. En este trabajo se repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También se describirán los productos que Microsoft ha liberado como .NET Framework, Visual Studio Code, Xamarin.Forms, y cómo ahora están soportados por plataformas como Linux o MacOS.
+Desde que Satya Nadella fuera nombrado CEO de Microsoft en 2014, la compañía ha dado un giro de 180º en su posición respecto al software libre. En este trabajo se repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También se describirán los productos que Microsoft ha liberado, como .NET Framework, Visual Studio Code, Xamarin.Forms, y cómo ahora están soportados por plataformas como Linux o MacOS.
 
 \section{Relación de Microsoft con el Software Libre}
-\subsection{La era Gates}
-\subsection{La era Balmer}
-\subsection{La era Nadella}
+\subsection{Microsoft con Gates y Ballmer}
+Históricamente, Microsoft siempre ha destacado por su oposición al paradigma del software libre/código abierto. Desde 1970 hasta 2010, bajo las direcciones de Bill Gates primero y Steve Ballmer después, 
+
+\subsubsection{2001: ``Linux is a cancer''}
+Parecer ser que se refería a las licencias Copyleft, mientras que 
+
+\subsubsection{2014: Balmer contra LiMux}
+ \href{https://www.muycomputer.com/2014/05/16/linux-en-munich/}{Balmer contra el cambio a Linux en Munich}
+
+\subsection{Microsoft con Nadella}
+
+Inicio 4/2/2014
+
+\subsection{Microsoft abre .NET y lo lleva a Linux y OS}
+\href{https://arstechnica.com/information-technology/2014/11/microsoft-open-sources-net-takes-it-to-linux-and-os-x/}{Microsoft abre .NET y lo lleva a Linux y OS}
+
+\subsubsection{2016: Xamarin}
+\href{https://www.genbeta.com/desarrollo/microsoft-adquiere-xamarin}{Compra de Xamarin}
+
+\href{https://www.petri.com/microsofts-newly-acquired-xamarin-expands-developer-tools-new-features}{Hacen abierto el SDK de Xamarin}
+
+\subsubsection{2018: Compra de Github}
+\href{https://www.xataka.com/aplicaciones/oficial-microsoft-compra-github-7-500-millones-dolares}{Compra de GitHub 1}
+
+\href{https://www.elconfidencial.com/tecnologia/2018-06-04/microsoft-ahora-ama-el-software-libre-compra-la-startup-github-por-7-500-millones_1573704/}{Compra de GitHub 2}
+
+\href{https://www.xataka.com/aplicaciones/microsoft-punto-adquirir-github-desarrolladores-desarrolladores-desarrolladores}{Compra de GitHub 3}
+
+\subsubsection{2018: Open Invention Network}
+Hacer hincapié en las patentes que aporta, relación con la guerra de pantentes en el pasado.
+\href{https://azure.microsoft.com/en-us/blog/microsoft-joins-open-invention-network-to-help-protect-linux-and-open-source/}{Microsoft se une a la Open Invention Network 1}
+
+\href{https://www.zdnet.com/article/what-does-microsoft-joining-the-open-invention-network-mean-for-you/}{Microsoft se une a la Open Invention Network 2}
+
+\href{https://www.muycomputerpro.com/2018/10/10/microsoft-se-une-a-open-invention-network}{Microsoft se une a la Open Invention Network 3}
+
+\subsubsection{2019: Charla de Richard Stallman en Microsoft}
+\href{https://stallman.org/articles/microsoft-talk.html}{Charla de Stallman en Microsoft}
+
+\subsubsection{2019: Petición de liberar Windows 7}
+De llegar a liberar windows 7, quizás les interesaría utilizar una licencia copyleft para que nadie les hiciera competencia vendiendo su producto como no-libre.
+
+
+
 \section{Licencias de Microsoft}
 Cita: \cite{desde_linux_2020}
+
 \subsection{Microsoft Public License (MS-PL)}
-Cita: \cite{microsoft_public_license_mspl}
+La \href{https://opensource.org/licenses/MS-PL}{Licencia Púbica de Microsoft (MS-PL)} \cite{microsoft_public_license_mspl} es la menos restrictiva de todas las licencias de la compañía. Permite la distribución y redistribución de código fuente tanto para fines comerciales como para no comerciales.
+
+Esta licencia ha sido reconocida como licencia libre/abierta por la Free Software Foundation y por la Open Source Initiative \cite{desde_linux_2020}.
+
 \subsection{Microsoft Reciprocal License (MS-RL)}
+La \href{https://opensource.org/licenses/MS-RL}{Licencia Recíproca de Microsoft} permite la distribución de código derivado siempre y cuando los archivos fuentes estén incluidos y mantengan la licencia MS-RL.
+
 Cita: \cite{microsoft_reciprocal_license_msrl}
 \subsection{Licencias privativas, cerradas y comerciales}
 \subsubsection{Microsoft Reference source License (MS-RSL)}
+Esta es la más restrictiva de las licencias de código compartido de Microsoft. El código fuente está disponible sólo para verse con fines de referencia, principalmente para poder ver las clases de código fuente de Microsoft durante la depuración. Los desarrolladores no pueden distribuir o modificar el código para fines comerciales o no comerciales. La licencia ha sido anteriormente abreviada Ms-RL, pero Ms-RL ahora se refiere a la Licencia Recíproca de Microsoft.
 \subsubsection{Microsoft Limited Public License (MS-LPL)}
+Esta es una versión de la licencia pública de Microsoft en la que los derechos sólo se conceden a los desarrolladores de software basado en Microsoft Windows. Esta licencia no es de código abierto, tal como se define por la OSI, ya que viola la condición de que las licencias de código abierto debe ser tecnológicamente neutrales.
 \subsubsection{Microsoft Limited Reciprocal License (MS-LRL)}
+Esta es la versión de la Licencia Recíproca de Microsoft en la que los derechos sólo se conceden cuando se desarrolla software para una plataforma Microsoft Windows. Al igual que la Ms-LPL, esta licencia no es de código abierto porque no es tecnológicamente neutral.
 \section{Productos de Software Libre}
+\href{https://opensource.microsoft.com/explore}{Contribute to Microsoft open source projects}
 \subsection{.NET Framework}
 \subsection{.NET Core}
 \subsection{Entity Framework Core}
