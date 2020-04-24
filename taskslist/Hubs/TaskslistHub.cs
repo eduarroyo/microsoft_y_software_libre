@@ -24,14 +24,14 @@ namespace taskslist.Hubs
             await Clients.Caller.SendAsync("listUpdated", tasks);
         }
 
-        public async Task NewTask(string user, string task)
+        public async Task NewTask(string task)
         {
             Models.Tareas newTask = new Models.Tareas
             {
                 Tarea = task?.Trim(),
                 CreadoFecha =  System.DateTime.Now,
                 ModificadoFecha = System.DateTime.Now,
-                Usuario = user?.Trim(),
+                Usuario = "",
                 Resuelta = false                
             };
 
@@ -41,7 +41,7 @@ namespace taskslist.Hubs
                 await context.SaveChangesAsync();
             }
 
-            await Clients.All.SendAsync("taskAdded", newTask);
+            await Clients.All.SendAsync("taskUpdated", newTask);
         }
 
         public async Task RemoveTask(long taskId)
@@ -70,7 +70,6 @@ namespace taskslist.Hubs
                 {
                     taskToUpdate.Resuelta = done;
                     taskToUpdate.ModificadoFecha = System.DateTime.Now;
-                    context.Remove(taskToUpdate);
                     await context.SaveChangesAsync();
                 }
             }

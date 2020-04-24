@@ -63,4 +63,4 @@ $(function() {
         drawCanvas(prev_x, prev_y, x, y, clr);
     });
     connection.start();
-})
+});

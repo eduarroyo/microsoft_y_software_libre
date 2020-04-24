@@ -1,7 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Task list";
-}
+﻿@page
+    <input type="text" id="taskInput"/><button id="create">New Task</button>
+    <ul id="list"></div>
 
-<div class="text-center">
-    Esto es la lista de tareas
-</div>
+
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/tasklist.js"></script>
+}
