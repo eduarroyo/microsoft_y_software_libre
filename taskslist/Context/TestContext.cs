@@ -17,6 +17,7 @@ namespace taskslist.Context
         }
 
         public virtual DbSet<Mensajes> Mensajes { get; set; }
+        public virtual DbSet<Tareas> Tareas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -44,6 +45,32 @@ namespace taskslist.Context
 
                 entity.Property(e => e.Remitente)
                     .IsRequired()
+                    .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Tareas>(entity =>
+            {
+                entity.HasKey(e => e.TareaId)
+                    .HasName("PK__Tareas__0CA80258E409ECFC");
+
+                entity.Property(e => e.TareaId).HasColumnName("tarea_id");
+
+                entity.Property(e => e.CreadoFecha)
+                    .HasColumnName("creado_fecha")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.ModificadoFecha)
+                    .HasColumnName("modificado_fecha")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.Resuelta).HasColumnName("resuelta");
+
+                entity.Property(e => e.Tarea)
+                    .HasColumnName("tarea")
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Usuario)
+                    .HasColumnName("usuario")
                     .HasMaxLength(50);
             });
 

@@ -5,9 +5,9 @@ namespace taskslist.Hubs
 {
     public class WhiteboardHub : Hub
     {
-        public async Task SendMessage(string user, string message)
+        public Task Draw(int prevX, int prevY, int currentX, int currentY, string color)
         {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
+            return Clients.Others.SendAsync("draw", prevX, prevY, currentX, currentY, color);
         }
     }
 }

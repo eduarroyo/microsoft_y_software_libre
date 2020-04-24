@@ -1,7 +1,14 @@
-﻿@{
-    ViewData["Title"] = "Whiteboard";
-}
+﻿@page
+<canvas id="canvas" width="800" height="500"></canvas>
+<select id="color">
+    <option value="black">Black</option>
+    <option value="red">Red</option>
+    <option value="yellow">Yellow</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+</select>
 
-<div class="text-center">
-    Esto es la pizarra
-</div>
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/whiteboard.js"></script>
+}
