@@ -88,3 +88,7 @@ input[type=checkbox] {
 .done .task {
   text-decoration: line-through;
 }
+
+canvas {
+  border: solid 1px gray;
+}
