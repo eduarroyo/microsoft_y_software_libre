@@ -9,7 +9,6 @@ $(function() {
     var mousex = 0;
     var mousey = 0;
     var mousedown = false;
-    var tooltype = 'draw';
 
     $(canvas).on('mousedown', function (e) {
         last_mousex = mousex = parseInt(e.clientX - canvasx);
@@ -53,7 +52,6 @@ $(function() {
         $('#output').html('current: ' + mousex + ', ' + mousey + '<br/>last: ' + last_mousex + ', ' + last_mousey + '<br/>mousedown: ' + mousedown);
     });
 
-    var mouse_down = false;
     var connection = new signalR.HubConnectionBuilder()
         .withUrl('/whiteboardhub')
         .build();

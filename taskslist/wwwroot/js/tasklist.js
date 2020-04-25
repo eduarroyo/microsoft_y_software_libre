@@ -60,7 +60,7 @@ $(function() {
 
 
     connection.on("listUpdated", function (taskList) {
-        var checked, striked, task;
+        var task;
         console.log("listUpdated", taskList);
 
         $("#list").empty();
