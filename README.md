@@ -7,7 +7,8 @@ Escuela Politécnica Superior - Universidad de Córdoba
 
 Autor: [Eduardo Arroyo Ramírez](https://twitter.com/eduarroyo)
 
-Este trabajo presenta la relación de Microsoft con el mundo del Software Libre a lo largo de los años. 
+
+Este trabajo repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También describe algunos de los productos que Microsoft ha liberado, como .NET Framework, Visual Studio Code o Xamarin.Forms y cómo ahora están soportados por plataformas como Linux o MacOS.
 
 Este trabajo consta de tres partes:
 1. Un [artículo](https://github.com/eduarroyo/microsoft_y_software_libre/blob/master/articulo/microsoftsl.pdf) cuyas fuentes latex se encuentran en el [directorio articulo](https://github.com/eduarroyo/microsoft_y_software_libre/tree/master/articulo).
