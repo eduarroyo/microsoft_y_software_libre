@@ -16,6 +16,9 @@
     top=25mm,
     bottom=25mm
 }
+
+\usepackage{appendix}
+
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -68,118 +71,16 @@
 \clearpage
 
 \justify
-\section{Introducción}
-Microsoft ha sido históricamente enemiga acérrima del software libre, pero desde que Satya Nadella fuera nombrado CEO de Microsoft en 2014, la compañía ha dado un giro de 180º a su postura al respecto.
 
-Este trabajo repasa el origen y la motivación del cambio de paradigma de la compañía y las repercusiones que dicho cambio ha tenido. También describe algunos de los productos que Microsoft ha liberado, como .NET Framework, Visual Studio Code o Xamarin.Forms y cómo ahora están soportados por plataformas como Linux o MacOS.
+\input{Secciones/01_Introduccion}
+\input{Secciones/02_El_estilo_Microsoft}
+\input{Secciones/03_Relacion_de_Microsoft_con_el_Software_Libre}
+\input{Secciones/04_Motivos_del_cambio_en_Microsoft}
+\input{Secciones/05_Licencias_Microsoft}
+\input{Secciones/06_Productos_Software_Libre_Microsoft}
+\input{Secciones/07_Aplicacion_NETCore_en_Linux}
+\input{Secciones/08_Conclusiones}
 
-\section{El estilo Microsoft: Embrace, extend and extinguish}
-Microsoft es una multinacional fundada el 4 de abril de 1975 por Bill Gates y Paul Allen en Albuquerque, Nuevo México. Desde sus inicios, la compañía se ha caracterizado por su cuestionable ética y su agresiva estrategia empresarial, así como por el uso de su posición dominante para <<exterminar>> a la competencia e imponer sus productos y sus estándares. Como ejemplo de ello, se exponen a continuación algunos episodios de la historia de la compañía.
-
-\subsection{OS/2 vs Windows 3.X}
-\href{https://www.quora.com/Why-did-IBMs-OS-2-project-lose-to-Microsoft-given-that-IBM-had-much-more-resources-than-Microsoft-at-that-time}{Microsoft desarrolló OS/2} como socio de IBM y luego se desmarcó para desarrollar su Windows 3.X desde una posición de ventaja y hacer la competencia a OS/2.
-
-\subsection{1995-2001: La guerra de los navegadores}
-Durante los años 90 tuvo lugar la llamada \href{https://es.wikipedia.org/wiki/Guerra_de_navegadores}{Guerra de Navegadores} en la que Microsoft logró imponer su navegador Internet Explorer distribuyéndolo gratuitamente con Windows 95, lo que asfixió comercialmente a su principal competidor, Netscape Communicator, que contaba con un producto mejor. Aunque Microsoft fue condenado en un \href{https://es.wikipedia.org/wiki/Caso_Estados_Unidos_contra_Microsoft}{juicio por monopolio}, tras las apelaciones y el acuerdo final, las medidas adoptadas finalmente no obligaban a la compañía a realizar cambios efectivos en su estructura o su política comercial.
-
-\href{https://thehistoryoftheweb.com/browser-wars/}{The History of the Browser Wars: When Netscape Met Microsoft}
-
-\subsection{2006: Embrace, extend and extinguish}
-El departamento de justicia de los estados unidos descubrió que Microsoft usaba la expresión <<\href{https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish}{embrace, extend and extinguish}>> internamente para describir su estrategia por la cuál Microsoft decide en un primer momento <<adoptar>> un estándar público, después lo <<mejora>> añadiendo extensiones incompatibles con el estándar original, y termina <<extinguiendo>> el estándar público al imponer sus propias extensiones propietarias por medio de su dominio del mercado. Según algunos críticos, esta estrategia tiende a reforzar el dominio de Microsoft e inhibe la competencia.
-
-\section{Relación de Microsoft con el Software Libre}
-\subsection{Ataques al mundo del Software Libre}
-
-\subsubsection{1998-2004: The Halloween Documents}
-Se conocen como los <<\href{https://en.wikipedia.org/wiki/Halloween_documents}{Halloween Documents}>> una serie de documentos confidenciales de Microsoft sobre potenciales estrategias relacionadas con el software libre/open-source y sobre Linux en particular, y una serie de respuestas de los medios a estos documentos.
-
-Estos documentos fueron publicados por Eric S. Raymond el 30 de octubre de 1998 y Microsoft ha reconocido su autenticidad. Los dos primeros documentos reconocen que los programas libres/abiertos constituyen una amenaza significativa al dominio de Microsoft, reconocen que dichos programas son más competitivos que los suyos y sugieren medios para interferir en su desarrollo. Se trata de una información muy importante ya que contradice varias declaraciones publicas de la compañía.
-
-\subsubsection{2001: <<Linux is a cancer>>}
-\href{https://www.theregister.co.uk/2001/06/02/ballmer_linux_is_a_cancer/}{Ballmer: <<Linux is a cancer>>}.
-\subsubsection{2009: Hostilidades contra Linux}
-\href {https://arstechnica.com/information-technology/2009/04/linux-foundation-says-its-time-to-ditch-microsofts-fat/}{La Linux Foundation dice que  }
-
-\subsubsection{2010: Las guerras de patentes}
-
-\subsubsection{2014: Balmer contra LiMux}
- \href{https://www.muycomputer.com/2014/05/16/linux-en-munich/}{Balmer contra el cambio a Linux en Munich}
-
-\subsection{La etapa de Satya Nadella}
-Inicio 4/2/2014
-Cambio de paradigma: cloud computing, software como servicio: el software de servidor es territorio libre.
-
-\subsubsection{2014: Microsoft abre .NET y lo lleva a Linux y OS}
-\href{https://arstechnica.com/information-technology/2014/11/microsoft-open-sources-net-takes-it-to-linux-and-os-x/}{Microsoft abre .NET y lo lleva a Linux y OS}
-
-\subsubsection{2016: Xamarin}
-\href{https://www.genbeta.com/desarrollo/microsoft-adquiere-xamarin}{Compra de Xamarin}
-
-\href{https://www.petri.com/microsofts-newly-acquired-xamarin-expands-developer-tools-new-features}{Hacen abierto el SDK de Xamarin}
-
-\subsubsection{2018: Compra de Github}
-\href{https://www.xataka.com/aplicaciones/oficial-microsoft-compra-github-7-500-millones-dolares}{Compra de GitHub 1}
-
-\href{https://www.elconfidencial.com/tecnologia/2018-06-04/microsoft-ahora-ama-el-software-libre-compra-la-startup-github-por-7-500-millones_1573704/}{Compra de GitHub 2}
-
-\href{https://www.xataka.com/aplicaciones/microsoft-punto-adquirir-github-desarrolladores-desarrolladores-desarrolladores}{Compra de GitHub 3}
-
-\subsubsection{2018: Open Invention Network}
-Hacer hincapié en las patentes que aporta, relación con la guerra de patentes en el pasado.
-\href{https://azure.microsoft.com/en-us/blog/microsoft-joins-open-invention-network-to-help-protect-linux-and-open-source/}{Microsoft se une a la Open Invention Network 1}
-
-\href{https://www.zdnet.com/article/what-does-microsoft-joining-the-open-invention-network-mean-for-you/}{Microsoft se une a la Open Invention Network 2}
-
-\href{https://www.muycomputerpro.com/2018/10/10/microsoft-se-une-a-open-invention-network}{Microsoft se une a la Open Invention Network 3}
-
-\subsubsection{2019: Charla de Richard Stallman en Microsoft}
-\href{https://stallman.org/articles/microsoft-talk.html}{Charla de Stallman en Microsoft}
-
-\subsubsection{2019: Petición de liberar Windows 7}
-De llegar a liberar windows 7, quizás les interesaría utilizar una licencia copyleft para que nadie les hiciera competencia vendiendo su producto como no-libre.
-
-\section{Licencias de Microsoft}
-Cita: \cite{desde_linux_2020}
-
-\subsection{Microsoft Public License (MS-PL)}
-La \href{https://opensource.org/licenses/MS-PL}{Licencia Púbica de Microsoft (MS-PL)} \cite{microsoft_public_license_mspl} es la menos restrictiva de todas las licencias de la compañía. Permite la distribución y redistribución de código fuente tanto para fines comerciales como para no comerciales.
-
-Esta licencia ha sido reconocida como licencia libre/abierta por la Free Software Foundation y por la Open Source Initiative \cite{desde_linux_2020}.
-
-\subsection{Microsoft Reciprocal License (MS-RL)}
-La \href{https://opensource.org/licenses/MS-RL}{Licencia Recíproca de Microsoft} permite la distribución de código derivado siempre y cuando los archivos fuentes estén incluidos y mantengan la licencia MS-RL.
-
-Cita: \cite{microsoft_reciprocal_license_msrl}
-\subsection{Licencias privativas, cerradas y comerciales}
-\subsubsection{Microsoft Reference source License (MS-RSL)}
-Esta es la más restrictiva de las licencias de código compartido de Microsoft. El código fuente está disponible sólo para verse con fines de referencia, principalmente para poder ver las clases de código fuente de Microsoft durante la depuración. Los desarrolladores no pueden distribuir o modificar el código para fines comerciales o no comerciales. La licencia ha sido anteriormente abreviada Ms-RL, pero Ms-RL ahora se refiere a la Licencia Recíproca de Microsoft.
-\subsubsection{Microsoft Limited Public License (MS-LPL)}
-Esta es una versión de la licencia pública de Microsoft en la que los derechos sólo se conceden a los desarrolladores de software basado en Microsoft Windows. Esta licencia no es de código abierto, tal como se define por la OSI, ya que viola la condición de que las licencias de código abierto debe ser tecnológicamente neutrales.
-\subsubsection{Microsoft Limited Reciprocal License (MS-LRL)}
-Esta es la versión de la Licencia Recíproca de Microsoft en la que los derechos sólo se conceden cuando se desarrolla software para una plataforma Microsoft Windows. Al igual que la Ms-LPL, esta licencia no es de código abierto porque no es tecnológicamente neutral.
-\section{Productos de Software Libre}
-\href{https://opensource.microsoft.com/explore}{Contribute to Microsoft open source projects}
-\subsection{.NET Framework}
-\subsection{.NET Core}
-\subsection{Entity Framework Core}
-\subsection{SignalR}
-\subsection{Xamarin}
-\subsection{Visual Studio Code}
-
-\section{Aplicación .NET Core desarrollada en entorno Linux}
-Descripción de un proyecto de ejemplo desarrollado en entorno Linux con .NET Core utilizando MVC y SignalR, con Visual Studio Code.
-
-Uso de SqlServer sobre Linux. Herramienta de comandos para configuración del servidor (sqlcmd)
-Ejemplo: sqlcmd -S localhost -U TestDbUser -P 'S4lm0r3j0.C0rd0b35'
-Uso de plugin de Visual Studio Core para diseño de la base de datos (Poner captura)
-Uso de la herramienta cliente de .NET Core (dotnet) para la gestión de paquetes del proyecto
-Uso de Entity Framework como ORM. Scaffolding con herramienta de consola para generar los modelos a partir de la base de datos: dotnet ef dbcontext scaffold "Server=localhost;Database=TestDB;User Id=TestDbUser;Password=S4lm0r3j0.C0rd0b35" Microsoft.EntityFrameworkCore.SqlServer -o Models --context-dir Context -c TestContext
-Uso de MVC framework para web y SignalR framework para WebSockets.
-Servidor web Kestrel
-
-\section{Conclusiones}
-
-\clearpage
 \bibliographystyle{ieeetr}
 \bibliography{microsoftsl}
 \addcontentsline{toc}{section}{Bibliografía}

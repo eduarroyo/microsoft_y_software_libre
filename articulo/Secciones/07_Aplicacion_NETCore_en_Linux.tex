@@ -1,0 +1,10 @@
+\section{Aplicación .NET Core desarrollada en entorno Linux}
+Descripción de un proyecto de ejemplo desarrollado en entorno Linux con .NET Core utilizando MVC y SignalR, con Visual Studio Code.
+
+Uso de SqlServer sobre Linux. Herramienta de comandos para configuración del servidor (sqlcmd)
+Ejemplo: sqlcmd -S localhost -U TestDbUser -P 'S4lm0r3j0.C0rd0b35'
+Uso de plugin de Visual Studio Core para diseño de la base de datos (Poner captura)
+Uso de la herramienta cliente de .NET Core (dotnet) para la gestión de paquetes del proyecto
+Uso de Entity Framework como ORM. Scaffolding con herramienta de consola para generar los modelos a partir de la base de datos: dotnet ef dbcontext scaffold "Server=localhost;Database=TestDB;User Id=TestDbUser;Password=S4lm0r3j0.C0rd0b35" Microsoft.EntityFrameworkCore.SqlServer -o Models --context-dir Context -c TestContext
+Uso de MVC framework para web y SignalR framework para WebSockets.
+Servidor web Kestrel
