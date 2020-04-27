@@ -45,15 +45,33 @@ La primera versión 1.0 apareció en junio de 2016, .NET Core 2.0 en agosto de 2
 
 
 \subsection{Visual Studio Code}
+Visual Studio Code es un editor de código fuente desarrollado por Microsoft para Windows , Linux y macOS. Incluye soporte para la depuración, control integrado de Git, resaltado de sintaxis, finalización inteligente de código, fragmentos y refactorización de código. También es personalizable, por lo que los usuarios pueden cambiar el tema del editor, los atajos de teclado y las preferencias. Es gratuito y de código abierto, aunque la descarga oficial está bajo software privativo e incluye características personalizadas por Microsoft.
 
+Visual Studio Code se basa en Electron, un framework que se utiliza para implementar Chromium y Node.js como aplicaciones para escritorio, que se ejecuta en el motor de diseño Blink. Aunque utiliza el framework Electron, el software no usa Atom y en su lugar emplea el mismo componente editor (Monaco) utilizado en Visual Studio Team Services (anteriormente llamado Visual Studio Online).
 
-\subsection{Entity Framework}
-Entity Framework 6 (EF6) es un asignador relacional de objetos (O/RM) probado para .NET con más de diez años de desarrollo de características y estabilización.
+\subsubsection{Características}
+Visual Studio Code es compatible con varios lenguajes de programación. Muchas de las características de Visual Studio Code no están expuestas a través de los menús o la interfaz de usuario. Más bien, se accede a través de la paleta de comandos o a través de archivos .json (por ejemplo, preferencias del usuario). La paleta de comandos es una interfaz de línea de comandos.
+
+Visual Studio Code se puede extender a través de complementos, disponible a través de un repositorio central. Esto incluye adiciones al editor y soporte de idiomas. Una característica notable es la capacidad de crear extensiones que analizan código, como linters y herramientas para análisis estático, utilizando el Protocolo de Servidor de Idioma.
+
+\subsection{Entity Framework Core}
+Entity Framework 6 (EF6) es un asignador relacional de objetos (O/RM) probado para .NET con más de diez años de desarrollo de características y estabilización, aunque ya no se desarrolla activamente.
 
 EF Core es una versión más moderna, ligera y extensible de Entity Framework que tiene capacidades y ventajas muy similares a EF6. EF Core es producto de una reescritura completa y contiene muchas características nuevas que no están disponibles en EF6, aunque todavía carece de algunas de las funcionalidades más avanzadas de asignación de EF6. Microsoft recomienda el uso de Entity Framework Core siempre y cuando las características del desarrollo se ajusten a los requisitos.
 
 Ambos funcionan con SQL Server o SQL Azure, SQLite, Azure Cosmos DB, MySQL, PostgreSQL y muchas otras bases de datos a través de un modelo de complemento de proveedor de bases de datos.
 
-Ambos productos se distribuyen bajo licencia Apache 2.0 y sus fuentes están disponibles en sus respectivos \href{https://github.com/dotnet/ef6}{repositorios} en \href{https://github.com/dotnet/efcore}{Github}.
+Tanto EF6 como EF Core se distribuyen bajo licencia Apache 2.0 y sus fuentes están disponibles en sus respectivos \href{https://github.com/dotnet/ef6}{repositorios} en \href{https://github.com/dotnet/efcore}{Github}.
 
-\subsection{SignalR}
+\subsection{.NET Core SignalR}
+.NET Core SignalR es una biblioteca de Open Source distribuida junto con .NET Core bajo licencia Apache 2.0 que simplifica la incorporación de funcionalidades Web en tiempo real a las aplicaciones. La funcionalidad web en tiempo real permite que el código del lado servidor inserte contenido en los clientes al momento. SignalR proporciona una API para crear llamadas a procedimiento remoto (RPC)de servidor a cliente. Las RPC llaman a funciones de JavaScript en los clientes desde el código de .NET Core del lado servidor. El código fuente de esta biblioteca puede encontrarse en su \href{https://github.com/dotnet/AspNetCore/tree/master/src/SignalR}{repositorio de Github}.
+
+Estas son algunas características de SignalR para ASP.NET Core:
+\begin{itemize}
+    \item Controla la administración de conexiones automáticamente.
+    \item Envía mensajes a todos los clientes conectados simultáneamente. Por ejemplo, un salón de chat.
+    \item Envía mensajes a clientes o grupos de clientes específicos.
+    \item Escala para controlar el aumento del tráfico.
+\end{itemize}
+
+Existe una versión de SignalR para .NET Framework Standard que también se distribuye bajo Apache 2.0 y sus fuentes está disponibles en \href{https://github.com/SignalR/SignalR}{Github}.
