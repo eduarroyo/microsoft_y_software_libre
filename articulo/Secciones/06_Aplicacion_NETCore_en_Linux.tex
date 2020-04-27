@@ -1,10 +1,41 @@
 \section{Aplicación .NET Core desarrollada en entorno Linux}
-Descripción de un proyecto de ejemplo desarrollado en entorno Linux con .NET Core utilizando MVC y SignalR, con Visual Studio Code.
+A modo de demostración de uso de las tecnologías libres de Microsoft se ha desarrollado una pequeña aplicación con .NET Core sobre Linux. Esta aplicación está disponible, junto con este documento y las transparencias en un \href{https://github.com/eduarroyo/microsoft_y_software_libre}{repositorio de Github}\footnote{https://github.com/eduarroyo/microsoft\_y\_software\_libre}.
 
-Uso de SqlServer sobre Linux. Herramienta de comandos para configuración del servidor (sqlcmd)
-Ejemplo: sqlcmd -S localhost -U TestDbUser -P 'S4lm0r3j0.C0rd0b35'
-Uso de plugin de Visual Studio Core para diseño de la base de datos (Poner captura)
-Uso de la herramienta cliente de .NET Core (dotnet) para la gestión de paquetes del proyecto
-Uso de Entity Framework como ORM. Scaffolding con herramienta de consola para generar los modelos a partir de la base de datos: dotnet ef dbcontext scaffold "Server=localhost;Database=TestDB;User Id=TestDbUser;Password=S4lm0r3j0.C0rd0b35" Microsoft.EntityFrameworkCore.SqlServer -o Models --context-dir Context -c TestContext
-Uso de MVC framework para web y SignalR framework para WebSockets.
-Servidor web Kestrel
+Se trata de una aplicación web MVC que utiliza la biblioteca de comunicaciones en tiempo real SignalR y el ORM Entity Framework Core para persistir algunos datos en una base de datos administrada por un servidor SQL-Server en el mismo sistema Linux. La aplicación tiene las siguientes funcionalidades:
+
+\begin{itemize}
+    \item Lista de tareas colaborativa con persistencia.
+    \item Chat en tiempo real con persistencia de los mensajes.
+    \item Pizarra colaborativa en tiempo real.
+\end{itemize}
+
+Para el desarrollo de la aplicación se han utilizado las siguientes herramientas:
+\begin{itemize}
+    \item sqlcmd: Herramienta de comandos para configuración de SQL-Server.
+    \item Editor Visual Studio Code para la edición del código, la elaboración de este documento, de las transparencias y de las preguntas de test en formato GIFT.
+    \item Plugin de Visual Studio Core para consultas contra la base de datos.
+    \item Herramienta cliente de .NET Core (dotnet) para la gestión de paquetes del proyecto y la generación del modelo OO a partir del esquema relacional de la base de datos.
+    \item Servidor web Kestrel.
+\end{itemize}
+
+La instalación de .net Core SDK se ha realizado siguiendo las \href{https://docs.microsoft.com/es-es/dotnet/core/install/linux-package-manager-ubuntu-1904}{instrucciones del Microsoft}\footnote{https://docs.microsoft.com/es-es/dotnet/core/install/linux-package-manager-ubuntu-1904}. La creación del proyecto ha partido de la plantilla de aplicación web MVC de .NET Core que se obtiene mediante la herramienta \code{dotnet} desde línea de comandos:
+
+\begin{lstlisting}[basicstyle=\small,xrightmargin=.10\textwidth,xleftmargin=.10\textwidth,language=bash]
+    $ dotnet new mvc -o tasklist
+\end{lstlisting}
+
+Utilizando la misma herramienta se han instalado la herramienta de scaffolding de Entity Framework Core y las dependencias del proyecto: SignalR y Entity Framework Core:
+
+\begin{lstlisting}[basicstyle=\small,xrightmargin=.10\textwidth,xleftmargin=.10\textwidth,language=bash]
+    $ dotnet tool install --global dotnet-ef
+    $ dotnet add package Microsoft.AspNetCore.SignalR.Client
+    $ dotnet add package Microsoft.EntityFrameworkCore.Design
+    $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+\end{lstlisting}
+
+El modelado de la base de datos se ha realizado mediante el plugin mssql de Visual Studio Code, que permite visualizar la estructura y realizar consultas de todo tipo contra una base de datos de SQL-Server. La clase de contexto de la base de datos, así como los modelos correspondientes a las tablas se generan automáticamente utilizando la herramienta de línea de comandos:
+
+\begin{lstlisting}[basicstyle=\small,xrightmargin=.10\textwidth,xleftmargin=.10\textwidth,language=bash]
+    $ dotnet ef dbcontext scaffold "<connection-string>" _ 
+        Microsoft.EntityFrameworkCore.SqlServer -o Models
+\end{lstlisting}
