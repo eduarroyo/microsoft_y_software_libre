@@ -1,0 +1,112 @@
+// Formato del cuestionario:
+//
+// - A continuación de "$CATEGORY: $course$/Valor por defecto para Software Libre y Compromiso Social/" 
+//   poner el nombre del trabajo y apellidos de autor o autores. Ejemplo: GIT-GomezBachiller
+//
+// - Debe tener 10 preguntas.
+//
+// - La sintaxis de las preguntas es 
+//	enunciado de la pregunta{
+//	~%-50%respuesta incorrecta 1.
+//	~%-50%respuesta incorrecta 2.
+//	=respuesta correcta.
+//	~%-50%respuesta incorrecta 3.
+//	}	
+//
+// - Todas las preguntas deben tener 4 opciones y solo una correcta.
+//	Las incorrectas precedidas por "~%-50%"
+//	La única correcta precedida de "="
+//
+// - Evitar poner la respuesta correcta en la misma posición.
+//
+// - A continuación puedes ver como ejemplo el cuestionario del trabajo sobre GIT presentado por Sergio Gomez Bachiller 
+
+$CATEGORY: $course$/Valor por defecto para Software Libre y Compromiso Social/MicrosoftSL-ArroyoRamirez
+
+// 1
+¿Qué compañía lideraba el mercado de la computación en los 80?
+{
+~%-50%Microsoft
+=IBM
+~%-50%HAL
+~%-50%Compaq
+}
+
+// 2
+¿En qué consiste la estrategia "Embrace, extend and extinguish"?
+{
+~%-50%Imponer tus propios estándares mediante tu posición dominante en el mercado.
+~%-50%Adoptar un estándar, mejorarlo y compartir las mejoras con la comunidad.
+=Adoptar un estándar público, añadir extensiones incompatibles con el estándar original e imponerlo mediante tu posición dominante eliminando a la competencia.
+}
+
+// 3
+¿Qué son los Halloween Documents?
+{
+=Una serie de documentos confidenciales donde Microsoft reconoce que Linux es una amenaza para la hegemonía de Windows y se sugiere estrategias para interferir en su desarrollo.
+~%-50%Una serie de documentos donde Microsoft recoje su plan maestro para dominar el mercado del software de escritorio.
+~%-50%Una serie de documentos terroríficos donde se recoje el diseño de Windows Millenium Edition.
+~%-50%Una serie de docuemntos publicados el 31/10/1998 donde Microsoft reconoce que utilizó código de Unix en Windows 95.
+}
+
+// 4
+¿Quiénes han sido, en orden, los CEO de Microsoft?{
+~%-50%Steve Ballmer, Bill Gates y Satya Nadella.
+=Bill Gates, Steve Ballmer y Satya Nadella.
+~%-50%Bill Gates, Satya Nadella y Steve Ballmer.
+~%-50%Bill Gates, Eric S. Raymond y Satya Nadella.
+}
+
+// 5
+¿Cuáles son las licencias libres más utilizadas por Microsoft?
+{
+~%-50%MS-PL y MS-RL
+~%-50%GPL y LGPL
+=Apache 2.0 y MIT
+~%-50%MS-LPL y MS-LRL
+}
+
+// 6
+Selecciona la opción para construir una oración verdadera. Microsoft cambió su posición hacia el software libre...
+{
+=...tras la caída de de PCs en favor de los dispositivos móviles y la aparición del cloud computing.
+~%-50%...después de que Richard Stallman diera una charla en sus oficinas de Redmond.
+~%-50%...después de una noche de fiesta de Steve Ballmer.
+~%-50%...tras ser Windows superado por linux en cuota de mercado de sistemas de escritorio.
+}
+
+// 7
+¿En qué plataformas se pueden crear aplicaciones de .NET Core?
+{
+~%-50%Linux
+~%-50%macOS
+~%-50%Windows
+=Todas las anteriores
+}
+
+// 8
+¿Qué es Xamarin?
+{
+=Una plataforma de desarrollo de aplicaciones nativas multiplataforma mediante código .NET administrado.
+~%-50%Una plataforma de desarrollo de aplicaciones para Android
+~%-50%Una biblioteca de comunicaciones para .NET
+~%-50%Un IDE de Microsoft.
+}
+
+// 9
+¿Qué hace SignalR?
+{
+~%-50%Facilita la creación de redes de comunicaciones descentralizadas con .NET y .NET Core.
+~%-50%Proporciona una API para realizar animaciones y dibujos en el navegador.
+=Facilita la incorporación de funcionalidades web de tiempo-real a las aplicaciones .NET Y .NET Core.
+~%-50%Facilita la creación de redes de comunicaciones descentralizadas sólo con .NET.
+}
+
+// 10
+Visual Studio Code...
+{
+~%-50%Es un IDE de Microsoft de propósito general sólo disponible para Windows.
+=Es un editor de código extensible disponible en múltiples plataformas.
+~%-50%Es un compilador para de .NET Core.
+~%-50%Es una versión gratuita de Visual Studio IDE.
+}
