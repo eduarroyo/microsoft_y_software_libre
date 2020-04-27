@@ -1,18 +1,59 @@
 \section{Productos de Software Libre de Microsoft}
 \href{https://opensource.microsoft.com/explore}{Contribute to Microsoft open source projects}
 \subsection{.NET Core}
-.NET Core es un framework administrado, gratuito y de código abierto para los sistemas operativos Windows, Linux y macOS. Es un sucesor multiplataforma de .NET Framework. El proyecto es desarrollado principalmente por Microsoft bajo la Licencia MIT.
+.NET Core es una plataforma de desarrollo de código abierto para uso general. Se pueden crear aplicaciones de .NET Core para Windows, macOS y Linux para procesadores x64, x86, ARM32 y ARM64 mediante los lenguajes C\#, Visual Basic y F\#. Se proporcionan marcos y API para la nube, IoT, la Interfaz de usuario de cliente y el aprendizaje automático.
 
 La primera versión 1.0 apareció en junio de 2016, .NET Core 2.0 en agosto de 2017 y la última versión mayor, .NET Core 3.0, en mayo de 2019. Esta versión incluye soporte para aplicaciones de escritorio (sólo en entorno Windows), inteligencia artificial, aprendizaje automático e IoT.
 
-.NET Core admite cuatro escenarios multiplataforma:
+.NET Core es un proyecto Open Source de la \href{https://dotnetfoundation.org/}{.NET Foundation}. Se puede participar registrando incidencias y preguntas en la\href{https://developercommunity.visualstudio.com/spaces/61/index.html}{comunidad de desarrolladores} y también aportando código en los \href{https://github.com/dotnet/core/blob/master/Documentation/core-repos.md}{repositorios en GitHub}.
+
+\subsubsection{Características}
 \begin{itemize}
-    \item {Desarrollo de aplicaciones WEB}
-    \item {Aplicaciones de consola}
-    \item {Bibliotecas de clases}
+    \item Multiplataforma: se ejecuta en los sistemas operativos Windows, macOS y Linux.
+    \item Código abierto: el marco .NET Core es de código abierto, con licencias de MIT y Apache 2. .NET Core es un proyecto de .NET Foundation.
+    \item Moderno: implementa paradigmas modernos como programación asincrónica, patrones que no son de copia que usan estructuras y gobernanza de recursos para contenedores.
+    \item Rendimiento: proporciona alto rendimiento con características como intrínsecos de hardware, compilación en niveles e Intervalo<T>.
+    \item Coherente entre entornos: el código se ejecuta con el mismo comportamiento en varios sistemas operativos y varias arquitecturas, como x64, x86 y ARM.
+    \item Herramientas de línea de comandos: incluye herramientas de línea de comandos sencillas que se pueden usar para el desarrollo local y la integración continua.
+    \item Implementación flexible: se puede incluir .NET Core en la aplicación o de forma paralela (instalaciones a nivel de usuario o de sistema). Se puede usar con contenedores de Docker.
 \end{itemize}
 
-\subsection{Entity Framework Core}
-\subsection{SignalR}
+\subsubsection{API}
+.NET Core expone marcos para compilar cualquier tipo de aplicación:
+\begin{itemize}
+\item Aplicaciones en la nube con ASP.NET Core
+\item Aplicaciones móviles con Xamarin
+\item Aplicaciones de IoT con System.Device.GPIO
+\item Aplicaciones cliente de Windows con WPF y Windows Forms
+\item Aprendizaje automático ML.NET
+\end{itemize}
+
+.NET Core proporciona compatibilidad con las API .NET Framework y Mono API implementando la especificación de .NET Standard.
+
+.NET Core consta de las siguientes partes:
+\begin{itemize}
+    \item El runtime de .NET Core, que proporciona un sistema de tipos, la carga de ensamblados, un colector de elementos no usados, interoperabilidad nativa y otros servicios básicos. Las bibliotecas de .NET Core Framework proporcionan tipos de datos primitivos, tipos de composición de aplicaciones y utilidades fundamentales.
+    \item El runtime de ASP.NET, el cual proporciona un marco para crear aplicaciones modernas conectadas a Internet y basadas en la nube, como aplicaciones web, aplicaciones de IoT y back-ends móviles.
+    \item El SDK de .NET Core y los compiladores de lenguaje (Roslyn y F\#) que habilitan la experiencia de desarrollador de .NET Core.
+    \item El comando dotnet, que se usa para iniciar aplicaciones .NET Core y comandos de CLI. Se selecciona y lo hospeda, proporciona una directiva de carga de ensamblados e inicia aplicaciones y herramientas.
+\end{itemize}
+
+\subsubsection{Casos de éxito}
+.NET Core es utilizado por numerosas compañías en productos de primer orden como \href{https://dotnet.microsoft.com/platform/customers}{GoDaddy}, \href{https://customers.microsoft.com/en-us/story/744483-setpoint-medical-discrete-manufacturing-net}{Setpoint Medical} o incluso \href{https://www.youtube.com/watch?v=1DIDWWKk8Bg&feature=youtu.be}{Stack Overflow}. Se pueden consultar más productos que utilizan la plataforma .NET Core en el \href{https://dotnet.microsoft.com/platform/customers}{.NET Customers Showcase}.
+
 \subsection{Xamarin}
+
+
 \subsection{Visual Studio Code}
+
+
+\subsection{Entity Framework}
+Entity Framework 6 (EF6) es un asignador relacional de objetos (O/RM) probado para .NET con más de diez años de desarrollo de características y estabilización.
+
+EF Core es una versión más moderna, ligera y extensible de Entity Framework que tiene capacidades y ventajas muy similares a EF6. EF Core es producto de una reescritura completa y contiene muchas características nuevas que no están disponibles en EF6, aunque todavía carece de algunas de las funcionalidades más avanzadas de asignación de EF6. Microsoft recomienda el uso de Entity Framework Core siempre y cuando las características del desarrollo se ajusten a los requisitos.
+
+Ambos funcionan con SQL Server o SQL Azure, SQLite, Azure Cosmos DB, MySQL, PostgreSQL y muchas otras bases de datos a través de un modelo de complemento de proveedor de bases de datos.
+
+Ambos productos se distribuyen bajo licencia Apache 2.0 y sus fuentes están disponibles en sus respectivos \href{https://github.com/dotnet/ef6}{repositorios} en \href{https://github.com/dotnet/efcore}{Github}.
+
+\subsection{SignalR}
